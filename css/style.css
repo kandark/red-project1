@@ -415,6 +415,10 @@ footer{
     padding: 20px;
     font-family: 'Raleway Medium'; 
 }
+.icons i{
+    
+    padding: 5px;
+}
 .footer-text p{
     padding: 2px;
     font-family:'Playfair Display Regular'; 
@@ -922,11 +926,7 @@ hr{
     color: white; 
     font-family: 'Raleway Medium';
 }
-.carousel{
-    padding: 10px;
-    height: 450px;
-    margin: auto;
-}
+
 .updates{
     height: 180px;
 }
