@@ -93,36 +93,29 @@
     font-weight: normal;
     font-style: italic;
 }
-header{
-    z-index: 999;
-}
+
 .container{
     width: 1240px;
     margin: auto;
 }
-.fixed-header{
-    z-index: 999;
-}
-.fixed-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%; 
-    
-    background-color: white;
-    z-index: 1;
-    
-    
-}
-.fixed-header+ .hero-banner{
-    padding-top: 102px;
-}
 
+header{
+    top: 0;
+   width: 100%;
+    z-index: 999;
+    position: fixed;
+    background-color: white;
+}
 .principal{
     
     display: flex;
     justify-content: space-between;
 }
+/* .cart-shop{
+    background-color: red;
+    width: 50px;
+    height: 50px;
+} */
 .cabecalho{
     height: 150px;
     width: 100%;
@@ -135,13 +128,14 @@ header{
     height: 100px;
     float: left;
     background-position: center center;
-    z-index: 999;
+
 }
 .icon-cart img{
     width: 80px;
     height: 70px;
-    float: right;
-    z-index: 999;
+
+    margin-right: 100px;
+
 
 }
 .navigation ul{
@@ -154,7 +148,7 @@ header{
     font-size: 20px;
     color: orangered;
     font-family: 'Raleway Medium';
-    z-index: 999;
+    
     
     
 }
@@ -329,7 +323,8 @@ font-style: normal;
      color: #fff;
      background: #000000;
      border-radius: 2em;
-     margin-left: 120px;
+     margin-left: 115px;
+     padding: 1em 3em;
      
  }
 
@@ -398,7 +393,7 @@ margin-top: 30px;
 .updates form{
     margin-top: 10px;
     margin-bottom: 10px;
-    padding: 0px;
+    padding: 1em 3em;
     display: flex;
     justify-content: center;
 }
@@ -463,18 +458,40 @@ footer{
 
 
 @media screen and (max-width:480px){
-    body{
+    .container{
         width: 95%;
-    }
-    .fixed-header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%; 
         
-        z-index: 999;
-    
     }
+       
+.cart-shop{
+    
+   display: flex;
+   align-items: flex-end;
+   justify-content: flex-end;
+   margin-top: -80px;
+}
+#clicks{
+    
+     width: 30px;
+     height: 30px;
+    text-align: center;
+     position: relative;
+     line-height: 8vh;
+}
+    /* .cart-shop{
+        margin-left: 240px;
+        margin-top: -90px;
+        margin-bottom: 30px;
+        position: absolute;
+        
+    }
+    
+    #clicks{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 8vh;
+    } */
 .logo img{
     width:90px;
     height: 60px;
@@ -482,9 +499,9 @@ footer{
 .icon-cart img{
     width: 40px;
     height: 60px;
-    position: relative;
-    margin-left: -110px;
     
+ margin-left: -30px;
+
 }
 
 hr{
@@ -511,7 +528,7 @@ hr{
 header{
     
     width: 100%;
-    height: 90px;
+    height: 100px;
 }
 
 .navigation ul{
@@ -800,7 +817,43 @@ footer{
         
         width: 95%;
     }
+    .principal{
+        margin-top: 10px;
+    }
+    
+.logo img{
+    width:110px;
+    height: 60px;
+}
+.icon-cart img{
+    width: 80px;
+    height: 60px;
+    position: relative;
   
+    margin-right:105px;
+
+}
+    
+
+
+.cart-shop{
+    
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    position: relative;
+ }
+ #clicks{
+     position: relative;
+    
+margin-top: -80px;
+     
+     text-align: center;
+      position: relative;
+      line-height: 8vh;
+      position: relative;
+      margin-right: 100px;
+ }
     
     .fixed-header {
         position: fixed;
@@ -820,14 +873,30 @@ footer{
 .container{
     width: 95%;
 }
-
-.fixed-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%; 
+header{
     z-index: 999;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    margin-bottom: 0px;
 }
+.cart-shop{
+    
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-top: -90px;
+    position: relative;
+ }
+ #clicks{
+     position: relative;
+     margin-top: -50px;
+     
+     text-align: center;
+      position: relative;
+      line-height: 8vh;
+ }
+ 
 hr{
     display: none;
 }
@@ -836,11 +905,12 @@ hr{
     height: 60px;
 }
 .icon-cart img{
-    width: 40px;
-    height: 60px;
+    width: 45px;
+    height: 50px;
     position: relative;
-    margin-left: -110px;
-    
+   
+    margin-right:25px;
+
 }
 
 
@@ -855,6 +925,8 @@ hr{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    margin-bottom: 90px;
     
 }
 
@@ -880,6 +952,7 @@ hr{
 /* hero banner */
 .hero-banner{ 
     margin-top: 20px;
+    
     
 }
 
@@ -1019,5 +1092,4 @@ hr{
 footer{
 font-size: 15px;
 }
- 
 }
