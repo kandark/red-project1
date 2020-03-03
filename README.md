@@ -3,13 +3,13 @@ A homepage for your client the Aloha Apparel Co. using HTML and CSS.Interactivit
 responsive layout with flexbox (optimized for the three required screen sizes).
 
 Requirements
->Git and GitHub
->HTML 5
->CSS
->JavaScript
-.Flickity
+* Git and GitHub :+1:
+* HTML 5 :+1:
+* CSS :+1:
+* JavaScript :+1:
+* Flickity :+1:
 
-Authors
-Rodrigo Kanda 
+# Authors:
+- Rodrigo Kanda 
 
 Red Academy
