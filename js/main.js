@@ -13,42 +13,34 @@ document.addEventListener("DOMContentLoaded", function () {
     // options
   });
 });
-// window.onscroll = function () { myFunction() };
 
-// var header = document.getElementById("myHeader");
-// var sticky = header.offsetTop;
-
-// function myFunction() {
-//   if (window.pageYOffset > sticky) {
-//     header.classList.add("fixed-header");
-
-
-//   } else {
-//     header.classList.remove("fixed-header");
-
-
-//   }
-// }
 //validate form
-let inputEmail = document.getElementById('input-email')
-inputEmail.addEventListener('input', (e) => {
 
-  if (inputEmail.validity.typeMismatch) {
-    inputEmail.setCustomValidity("I am expecting an e-mail address")
-  } else {
-    inputEmail.setCustomValidity("Please enter an e-mail valid");
+function validateEmail(email) {
+  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
+
+let submit = document.getElementById("input-submit")
+submit.addEventListener('click',validate)
+
+function validate(){
+  let result = document.getElementById("result")
+  let email=document.getElementById("input-email").value
+
+  result.value=""
+
+  if(validateEmail(email)){
+    result.innerHTML=`${email} is valid`
+    result.style.color="green"
+
+  }else if(validateEmail(email)==" "){
+    result.innerHTML=`Please insert the correct email!`
+    result.style.color="red"
+
+  }else{
+    result.innerHTML=`${email} is not valid`
+    result.style.color="red"
+   
   }
-
-
-})
-var clicks = 0;
-function onClick() {
-  clicks += 1;
-
-  document.getElementById("clicks").innerHTML = clicks;
-  document.getElementById("clicks").style.background = "red"
-  document.getElementById("clicks").style.width = "40px"
-  document.getElementById("clicks").style.height = "40px"
-  document.getElementById("clicks").style.borderRadius = "50px"
-
-};
+}

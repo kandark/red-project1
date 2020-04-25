@@ -65,6 +65,8 @@
 .container{
     width: 1240px;
     margin: auto;
+    padding-top: 70px;
+  
 }
 
 /* header
@@ -73,8 +75,9 @@ header{
     margin: auto;
    width: 100%;
     z-index: 999;
-    /* position: fixed;  */
+    position: fixed;  
     background-color: white;
+    top: 0;
 
 }
 .logo{
@@ -112,7 +115,7 @@ nav ul li{
 .hero-banner{ 
     width: 100%;
     height: 600px;
-    position: relative;
+    
     font-family: 'Playfair Display';
     background-image:linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5)),
     url("../images/banner-girl.png"),
@@ -120,6 +123,7 @@ nav ul li{
     background-position: left,center 40px,center;
     background-repeat: repeat,no-repeat,repeat;
     background-size: cover,contain,cover;
+
 
     
 }
@@ -145,19 +149,18 @@ nav ul li{
 .hero-banner h2{
     font-size: 48px;
 }
-hr{
-    display: none;
-}
+
 
 /* about
 -----------------------------------*/
 .about{
-    margin-left:400px;
+    
     text-align: center;
-    width: 500px;
+    font-size: 16px;
+    margin: 0px;
     font-family: 'Raleway Ligth';
-    margin-top: 20px;
-    margin-bottom: 20px;
+    
+
 }
 .about h2{
     font-family: 'Raleway Ligth';
@@ -169,60 +172,66 @@ hr{
 /* shop grid
 -----------------------------------*/
 .shop-grid{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-areas:
-    "mens mens trends glasses"
-    "shop bags women women";
+    display: flex;
+    flex-wrap: wrap;
+  
 }
-.mens{
-    margin: 5px;
 
-    grid-area: mens;
-    background: url(/images/mens-category.jpg);
+.mens{
+    background: url(/images/mens-category.jpg); 
+    background-repeat: no-repeat;
     background-size: 100%;
-    height: 250px; 
+    width: 50%;
+    height: 300px; 
 }
 .trends{
-    margin: 5px;
-
-    grid-area: trends;
     background: url("/images/trends-category.jpg");
     background-size: 100%;
+    height: 300px;
+    width: 25%;
+
+
+    background-repeat: no-repeat;
+
    }
    .glasses{
-    margin: 5px;
-
-       grid-area: glasses;
     background: url("/images/glasses-category.jpg");
     background-size: 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+    width: 25%;
+
+
    }
    .shop{
-    margin: 5px;
 
-    height: 250px;
-   grid-area: shop;
+    height: 300px;
     background: url("/images/sale-category.jpg");
     background-size: 100%;
+    background-repeat: no-repeat;
+    width: 25%;
+
+
    }
    .bags{
-    margin: 5px;
-
-       grid-area: bags;
     background: url("/images/bags-category.jpg");
     background-size: 100%;
-    height: 250px;
+    background-repeat: no-repeat;
+
+    height: 300px;
+    width: 25%;
+
    }
    .women{
-    margin: 5px;
-
-       grid-area: women;
     background: url("/images/womens-category.jpg");
     background-size: 100%;
-    height: 250px;
+    background-repeat: no-repeat;
+    width: 50%;
+
+
+    height: 300px;
    }
    .shop-notice{
-    margin: 5px;
 
        display: flex;
        justify-content: center;
@@ -327,7 +336,7 @@ hr{
             width: 100px;
             height: 35px;
             margin-top: 10px;
-            margin-left: -104px;
+            margin-left: -70px;
             color: #fff;
             background-color: rgb(78, 0, 0);
         
@@ -357,3 +366,129 @@ footer{
     
     margin-right: 10px;
 }
+
+/* media queries
+---------------------------------*/
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 600px) {
+ 
+    .container{
+        width: 100%;
+      
+
+    }
+    #aloha-logo{
+        width: 80px;   
+    }
+    #cart-icon{
+        width: 54px;
+        margin-right: 5px;
+    }
+    nav ul li{
+        margin-top: -20px;
+        margin-left: 20px;
+        font-size: 12px;
+        }
+        hr{
+            margin-top: -25px;
+            margin-bottom: 20px;
+        }
+        .hero-banner p{
+            top: 245px;
+            left: 200px;
+            
+        }
+        .hero-banner h2{
+             
+            position: absolute;
+            top: 255px;
+            left: 150px;
+            margin-top: 30px;
+        }
+        
+        .hero-banner h2{
+            font-size: 48px;
+        }
+        .shop-grid .mens,.trends,.glasses,.shop,.bags,.women{
+         width: 100%;
+            
+      
+        }
+       
+    
+       
+ }
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 600px){
+
+    .container{
+       
+        width: 100%;
+      
+    }
+    .shop-grid{
+        margin: 5px;
+        padding: 10px;
+    }
+   
+    .shop-grid .shop,.bags,.women{
+        margin-top: -140px;
+           
+     
+       }
+    hr{
+        display: none;
+    }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px){
+    hr{
+        display: none;
+    }
+   
+    .container{
+       
+        width: 100%;
+        
+    }
+    .shop-grid{
+        margin: 10px;
+        padding: 10px;
+    }
+    .shop-grid .mens,.trends,.glasses{
+        height: 300px;
+        margin:5px 0px 30px 0px;
+        
+           
+     
+       }
+    
+  }
+
+/* Large devices (desktops, 992px and up) */
+/* @media (min-width: 992px) and (max-width: 1199.98px) { 
+  
+ } */
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container{
+       
+        width: 100%;
+      
+    }
+    .shop-grid{
+        margin: 10px;
+        padding: 10px;
+    }
+    .shop-grid .mens,.trends,.glasses{
+        height: 300px;
+        margin:5px 0px 150px 0px;
+        
+           
+     
+       }
+     
+    
+  }
