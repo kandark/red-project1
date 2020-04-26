@@ -44,3 +44,69 @@ function validate(){
    
   }
 }
+
+
+/* function to add cart
+------------------------------------------------*/
+
+let carts = document.querySelectorAll(".add-cart")
+let products =[{
+  name:'Grey Tshirst',
+  tag: 'greytshirt',
+  price: 15,
+  inCart: 0
+},
+{
+  name:'Grey Hoodie',
+  tag: 'greytshirt',
+  price: 15,
+  inCart: 0
+},
+{
+  name:'Black Tshirt',
+  tag: 'greytshirt',
+  price: 15,
+  inCart: 0
+},
+{
+  name:'Black Hoddie',
+  tag: 'greytshirt',
+  price: 15,
+  inCart: 0
+}
+]
+for (let i = 0; i < carts.length; i++) {
+  carts[i].addEventListener('click',()=>{
+      cartsNumbers()
+     })  
+}
+
+function onloadCartNumbers(){
+  let productsNumbers = localStorage.getItem('cartNumbers');
+  if(productsNumbers){
+    document.querySelector('.cart span').textContent = productsNumbers
+
+  }
+
+
+}
+
+function cartsNumbers(){
+  let productsNumbers = localStorage.getItem('cartNumbers');
+
+  productsNumbers = parseInt(productsNumbers)
+
+  if(productsNumbers){
+    localStorage.setItem('cartNumbers',productsNumbers + 1);
+    document.querySelector('.cart span').textContent = productsNumbers + 1;
+
+
+  }else{
+
+    localStorage.setItem('cartNumbers',1);
+    document.querySelector('.cart span').textContent = 1;
+
+
+  }
+ }
+onloadCartNumbers()
